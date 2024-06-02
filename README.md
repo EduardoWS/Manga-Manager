@@ -2,6 +2,9 @@
 
 Este é um programa de gerenciamento de mangás desenvolvido em C++ usando Qt para a interface gráfica. O programa permite adicionar, editar, remover e visualizar mangás.
 
+![image](https://github.com/EduardoWS/Manga-Manager/assets/81593054/72be186b-6792-4a72-aabf-0636f5f70a9c)
+
+
 ## Estrutura do Projeto
 
 - `main.cpp`: Ponto de entrada do programa. Inicializa a aplicação Qt e exibe a janela principal.
