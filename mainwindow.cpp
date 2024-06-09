@@ -167,3 +167,8 @@ void MainWindow::updateMangaCount() {
     int count = mangaManager->getPrimaryIndicesSize();
     ui->label->setText(QString("Total de mangás catalogados: %1").arg(count));
 }
+
+void MainWindow::onSearchMangaButtonClicked(){
+    QItemSelectionModel *selectionModel = ui->mangaTableView->selectionModel();
+    selectionModel->ClearAndSelect()
+}

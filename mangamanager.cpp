@@ -7,6 +7,7 @@
 MangaManager::MangaManager(const QString &basePath) {
     dataFileName = basePath + "/manga_data.txt";
     indexFileName = basePath + "/manga_index.txt";
+    secondaryIndexFileName = basePath + "/manga_secondary_index.txt";
     loadIndices();
     qDebug() << "MangaManager initialized with data file:" << dataFileName << "and index file:" << indexFileName;
 }
@@ -25,6 +26,21 @@ void MangaManager::addManga(const Manga &manga) {
     } else {
         qDebug() << "Failed to open data file for appending";
     }
+}
+
+Manga MangaManger::getMangaByTitle(const QString &mangaTitle){
+    QFile secondaryIndexFile(secondaryIndexFileName);
+    Manga manga;
+    if (secondaryIndexFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&secondaryIndexFile);
+        in.setCodec("UTF-8");
+        /* se o arquivo contém uma linha com <título - índice>:
+         * umIndice = leIndice();
+         * manga = getMangaByIndex();
+         * */
+    }
+    return manga;
+
 }
 
 Manga MangaManager::getMangaByIndex(int index) {

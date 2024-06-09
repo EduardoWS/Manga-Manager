@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QStandardItemModel>
 #include "addmangadialog.h"
+#include "searchmangadialog.h"
 #include "mangamanager.h"
 
 QT_BEGIN_NAMESPACE
@@ -22,11 +23,13 @@ private slots:
     void onAddMangaButtonClicked();
     void onEditMangaButtonClicked();
     void onRemoveMangaButtonClicked();
+    void onSearchMangaButtonClicked();
     void onMangaTableViewSelectionChanged();
 
 private:
     Ui::MainWindow *ui;
     AddMangaDialog *addMangaDialog;
+    searchMangaDialog *searchMangaDialog;
     MangaManager *mangaManager;
     QStandardItemModel *model;
 
