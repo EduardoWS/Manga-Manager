@@ -13,13 +13,15 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     manga.cpp \
-    mangamanager.cpp
+    mangamanager.cpp \
+    searchmangadialog.cpp
 
 HEADERS += \
     addmangadialog.h \
     mainwindow.h \
     manga.h \
-    mangamanager.h
+    mangamanager.h \
+    searchmangadialog.h
 
 FORMS += \
     mainwindow.ui

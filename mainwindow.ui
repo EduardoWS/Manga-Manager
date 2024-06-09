@@ -93,7 +93,6 @@
          <font>
           <family>Ani</family>
           <pointsize>36</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -114,7 +113,6 @@
          <font>
           <family>Ani</family>
           <pointsize>34</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -212,7 +210,6 @@
          <font>
           <family>Ubuntu</family>
           <pointsize>14</pointsize>
-          <weight>50</weight>
           <bold>false</bold>
          </font>
         </property>
@@ -226,6 +223,19 @@
          <string>Total de mangás catalogados: </string>
         </property>
        </widget>
+       <widget class="QPushButton" name="search_manga_button">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>460</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Buscar</string>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>
@@ -237,7 +247,7 @@
      <x>0</x>
      <y>0</y>
      <width>1236</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
