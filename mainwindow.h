@@ -23,6 +23,7 @@ private slots:
     void onEditMangaButtonClicked();
     void onRemoveMangaButtonClicked();
     void onMangaTableViewSelectionChanged();
+    void onSearchButtonClicked();
 
 private:
     Ui::MainWindow *ui;

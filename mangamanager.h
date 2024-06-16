@@ -14,15 +14,23 @@ public:
     void updateManga(int index, const Manga &manga);
     void removeManga(int index);
     int getPrimaryIndicesSize() const;
+    QMap<QString, QList<int>> getSecondaryIndices() const;
 
 private:
     QString dataFileName;
     QString indexFileName;
-    QVector<int> primaryIndices;  // Vetor para armazenar os índices primários
+    QString secondaryIndexFileName;
+    QVector<qint64> primaryIndices;
+    QMap<QString, QList<int>> secondaryIndices; // Índice secundário para títulos
+    QString nextIdFileName;
+    int nextId; // ID único para mangás
 
     void loadIndices();
     void saveIndices();
+    void loadNextId();
+    void saveNextId();
     void saveAllMangas(const QVector<Manga> &allMangas);
+    void updateSecondaryIndex();
 };
 
 #endif // MANGAMANAGER_H

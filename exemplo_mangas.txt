@@ -1,0 +1,111 @@
+Manga 1:
+ISBN: 9784088700202
+Título: Death Note
+Autor(es): Tsugumi Ohba, Takeshi Obata
+Ano de Início: 2003
+Ano de Fim: 2006
+Gênero: Suspense, Sobrenatural
+Revista: Weekly Shonen Jump
+Editora: Shueisha
+Ano da Edição: 2003
+Quantidade de Volumes: 12
+Quantidade de Volumes Adquiridos: 6
+Volumes Adquiridos: 1,2,3,4,5,6
+
+Manga 2:
+ISBN: 9781591168108
+Título: Death Note
+Autor(es): Tsugumi Ohba, Takeshi Obata
+Ano de Início: 2003
+Ano de Fim: 2006
+Gênero: Suspense, Sobrenatural
+Revista: Weekly Shonen Jump
+Editora: Shueisha
+Ano da Edição: 2004
+Quantidade de Volumes: 12
+Quantidade de Volumes Adquiridos: 4
+Volumes Adquiridos: 1, 2, 3, 4
+
+Manga 3:
+ISBN: 9781421501683
+Título: Death Note
+Autor(es): Tsugumi Ohba, Takeshi Obata
+Ano de Início: 2003
+Ano de Fim: 2006
+Gênero: Suspense, Sobrenatural
+Revista: Weekly Shonen Jump
+Editora: Shueisha
+Ano da Edição: 2005
+Quantidade de Volumes: 12
+Quantidade de Volumes Adquiridos: 8
+Volumes Adquiridos: 1, 2, 3, 4, 5, 6, 7, 8
+
+Manga 4:
+ISBN: 9781593070195
+Título: Berserk
+Autor(es): Kentaro Miura
+Ano de Início: 1989
+Ano de Fim: 2021
+Gênero: Dark Fantasy, Ação
+Revista: Young Animal
+Editora: Hakusensha
+Ano da Edição: 1990
+Quantidade de Volumes: 41
+Quantidade de Volumes Adquiridos: 10
+Volumes Adquiridos: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+Manga 5:
+ISBN: 9782344011204
+Título: Another
+Autor(es): Yukito Ayatsuji, Hiro Kiyohara
+Ano de Início: 2009
+Ano de Fim: 2012
+Gênero: Horror, Mistério
+Revista: Young Ace
+Editora: Kadokawa Shoten
+Ano da Edição: 2010
+Quantidade de Volumes: 4
+Quantidade de Volumes Adquiridos: 2
+Volumes Adquiridos: 1, 2
+
+Manga 6:
+ISBN: 9781591167415
+Título: Blade of the Immortal
+Autor(es): Hiroaki Samura
+Ano de Início: 1993
+Ano de Fim: 2012
+Gênero: Ação, Drama
+Revista: Afternoon
+Editora: Kodansha
+Ano da Edição: 1994
+Quantidade de Volumes: 30
+Quantidade de Volumes Adquiridos: 5
+Volumes Adquiridos: 1, 2, 3, 4, 5
+
+Manga 7:
+ISBN: 9784199505247
+Título: Hunter x Hunter
+Autor(es): Yoshihiro Togashi
+Ano de Início: 1998
+Ano de Fim: Em publicação
+Gênero: Ação, Aventura
+Revista: Weekly Shōnen Jump
+Editora: Shueisha
+Ano da Edição: 1999
+Quantidade de Volumes: 37
+Quantidade de Volumes Adquiridos: 7
+Volumes Adquiridos: 1, 2, 3, 4, 5, 6, 7
+
+Manga 8:
+ISBN: 9781632360089
+Título: Attack on Titan
+Autor(es): Hajime Isayama
+Ano de Início: 2009
+Ano de Fim: 2021
+Gênero: Ação, Pós-apocalíptico
+Revista: Bessatsu Shōnen Magazine
+Editora: Kodansha
+Ano da Edição: 2010
+Quantidade de Volumes: 34
+Quantidade de Volumes Adquiridos: 12
+Volumes Adquiridos: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12

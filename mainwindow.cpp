@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include <QDir>
 
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -25,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     model->setHeaderData(2, Qt::Horizontal, "Autor(es)");
     model->setHeaderData(3, Qt::Horizontal, "Revista");
     model->setHeaderData(4, Qt::Horizontal, "Ano da Edição");
+    qDebug() << model->columnCount();
 
     ui->mangaTableView->setModel(model);
     ui->mangaTableView->horizontalHeader()->setStretchLastSection(true);
@@ -38,9 +41,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->edit_manga_button, &QPushButton::clicked, this, &MainWindow::onEditMangaButtonClicked);
     connect(ui->remove_manga_button, &QPushButton::clicked, this, &MainWindow::onRemoveMangaButtonClicked);
     connect(ui->mangaTableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onMangaTableViewSelectionChanged);
+    connect(ui->search_button, &QPushButton::clicked, this, &MainWindow::onSearchButtonClicked);
 
     updateMangaView();
     updateMangaCount();
+
+
 }
 
 MainWindow::~MainWindow() {
@@ -64,9 +70,39 @@ void MainWindow::onAddMangaButtonClicked() {
         manga.volumesCount = addMangaDialog->getVolumesCountEdit()->text().toInt();
         manga.acquiredVolumesCount = addMangaDialog->getAcquiredVolumesCountEdit()->text().toInt();
 
+        // verificar se a quantidade de volumes adquiridos é menor ou igual a quantidade de volumes
+        if (manga.acquiredVolumesCount > manga.volumesCount) {
+            QMessageBox::information(this, "Adicionar Mangá", "A quantidade de volumes adquiridos não pode ser maior que a quantidade de volumes!");
+            return;
+        }
+
+        // verificar se a quantidade de volumes adquiridos é menor ou igual a 100
+        if (manga.acquiredVolumesCount > 100) {
+            QMessageBox::information(this, "Adicionar Mangá", "A quantidade de volumes adquiridos não pode ser maior que 100!");
+            return;
+        }
+
+        
+        qDebug() << "Teste A";
         QStringList volumesList = addMangaDialog->getAcquiredVolumesListEdit()->text().split(",");
+        qDebug() << "Teste B";
         for (int i = 0; i < manga.acquiredVolumesCount && i < 100; ++i) {
-            manga.acquiredVolumes[i] = volumesList[i].toInt();
+            qDebug() << "Teste C";
+            try {
+                manga.acquiredVolumes[i] = volumesList[i].toInt();
+            } catch (std::exception &e) {
+                QMessageBox::information(this, "Adicionar Mangá", "A lista de volumes adquiridos contém valores inválidos!");
+                return;
+            } catch (...) {
+                QMessageBox::information(this, "Adicionar Mangá", "Erro desconhecido ao adicionar mangá!");
+                return;
+            }
+            //manga.acquiredVolumes[i] = volumesList[i].toInt();
+        }
+        // verificar se a lista de volumes é igual a quantidade de volumes adquiridos
+        if (volumesList.size() != manga.acquiredVolumesCount) {
+            QMessageBox::information(this, "Adicionar Mangá", "A quantidade de volumes adquiridos não corresponde a lista de volumes adquiridos!");
+            return;
         }
 
         mangaManager->addManga(manga);
@@ -167,3 +203,37 @@ void MainWindow::updateMangaCount() {
     int count = mangaManager->getPrimaryIndicesSize();
     ui->label->setText(QString("Total de mangás catalogados: %1").arg(count));
 }
+
+
+void MainWindow::onSearchButtonClicked() {
+    QString title = ui->entry_text->text();
+    if (title == ""){
+        updateMangaView();
+        return;
+    }
+
+    model->removeRows(0, model->rowCount()); // limpar linhas
+
+    QList<int> ids = mangaManager->getSecondaryIndices().value(title, QList<int>());
+    if (ids.isEmpty()) {
+        //updateMangaView();
+        QMessageBox::information(this, "Buscar Mangá", "Mangá não encontrado!");
+        return;
+    }
+
+    for (int i = 0; i < mangaManager->getPrimaryIndicesSize(); ++i) {
+        Manga manga = mangaManager->getMangaByIndex(i);
+        
+        if (ids.contains(manga.id)) {
+            QList<QStandardItem *> items;
+            items.append(new QStandardItem(manga.isbn));
+            items.append(new QStandardItem(manga.title));
+            items.append(new QStandardItem(manga.authors));
+            items.append(new QStandardItem(manga.magazine));
+            items.append(new QStandardItem(QString::number(manga.editionYear)));
+
+            model->appendRow(items);
+        }
+    }
+}
+

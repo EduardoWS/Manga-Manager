@@ -1,6 +1,6 @@
 # Manga Manager
 
-Este é um programa de gerenciamento de mangás desenvolvido em C++ usando Qt para a interface gráfica. O programa permite adicionar, editar, remover e visualizar mangás.
+Este é um programa de gerenciamento de mangás desenvolvido em C++ usando Qt para a interface gráfica. O programa permite adicionar, editar, remover, visualizar e pesquisar mangás.
 
 ## Estrutura do Projeto
 
@@ -9,7 +9,7 @@ Este é um programa de gerenciamento de mangás desenvolvido em C++ usando Qt pa
 - `mainwindow.h`: Declaração da classe `MainWindow`.
 - `manga.cpp`: Implementação da classe `Manga`, que representa um mangá individual com todos os seus atributos.
 - `manga.h`: Declaração da classe `Manga`.
-- `mangamanager.cpp`: Implementação da classe `MangaManager`, que gerencia a adição, edição, remoção e carregamento de mangás, bem como a manutenção dos índices primários.
+- `mangamanager.cpp`: Implementação da classe `MangaManager`, que gerencia a adição, edição, remoção e carregamento de mangás, bem como a manutenção dos índices primários e secundários.
 - `mangamanager.h`: Declaração da classe `MangaManager`.
 - `addmangadialog.cpp`: Implementação da classe `AddMangaDialog`, que fornece uma interface gráfica para adicionar ou editar mangás.
 - `addmangadialog.h`: Declaração da classe `AddMangaDialog`.
@@ -33,7 +33,8 @@ Este é um programa de gerenciamento de mangás desenvolvido em C++ usando Qt pa
 
 ## Como Usar
 
-1. Adicionar Mangá: Clique no botão "Adicionar" e preencha as informações.
-2. Editar Mangá: Selecione um mangá na tabela e clique no botão "Editar".
-3. Remover Mangá: Selecione um mangá na tabela e clique no botão "Excluir".
-4. Visualizar Mangás: Os mangás adicionados são listados na tabela.
+1. **Adicionar Mangá**: Clique no botão "Adicionar" e preencha as informações.
+2. **Editar Mangá**: Selecione um mangá na tabela e clique no botão "Editar".
+3. **Remover Mangá**: Selecione um mangá na tabela e clique no botão "Excluir".
+4. **Visualizar Mangás**: Os mangás adicionados são listados na tabela.
+5. **Pesquisar Mangás**: Use o Entry Text para inserir o título de um Mangá e o botão Pesquisar para realizar a busca. O buscador irá mostrar todos os Mangás com o mesmo título.

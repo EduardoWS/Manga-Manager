@@ -6,6 +6,7 @@
 #include <QFile>
 
 struct Manga {
+    int id;
     char isbn[20];
     char title[100];
     char authors[100];
