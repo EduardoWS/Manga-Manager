@@ -41,3 +41,4 @@ Este é um programa de gerenciamento de mangás desenvolvido em C++ usando Qt pa
 3. **Remover Mangá**: Selecione um mangá na tabela e clique no botão "Excluir".
 4. **Visualizar Mangás**: Os mangás adicionados são listados na tabela.
 5. **Pesquisar Mangás**: Use o Entry Text para inserir o título de um Mangá e o botão Pesquisar para realizar a busca. O buscador irá mostrar todos os Mangás com o mesmo título.
+
