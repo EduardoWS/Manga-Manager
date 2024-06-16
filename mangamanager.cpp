@@ -7,7 +7,7 @@
 #include <iostream>
 
 MangaManager::MangaManager(const QString &basePath) : nextId(0) {
-    dataFileName = basePath + "/manga_data.csv";
+    dataFileName = basePath + "/manga_data.txt";
     indexFileName = basePath + "/manga_index.csv";
     secondaryIndexFileName = basePath + "/manga_secondary_index.csv";
     nextIdFileName = basePath + "/next_id.txt";
